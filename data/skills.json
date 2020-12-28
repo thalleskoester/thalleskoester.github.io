@@ -1,0 +1,59 @@
+{
+  "skills": [
+    {
+      "name": "PHP",
+      "level": 5,
+      "theme": "yellow"
+    },
+    {
+      "name": "JS",
+      "level": 1,
+      "theme": "yellow"
+    },
+    {
+      "name": "Python",
+      "level": 1,
+      "theme": "yellow"
+    },
+    {
+      "name": "HTML5",
+      "level": 5,
+      "theme": "yellow"
+    },
+    {
+      "name": "CSS3",
+      "level": 5,
+      "theme": "yellow"
+    },
+    {
+      "name": "Jquery",
+      "level": 4,
+      "theme": "yellow"
+    },
+    {
+      "name": "React",
+      "level": 1,
+      "theme": "yellow"
+    },
+    {
+      "name": "SASS",
+      "level": 2,
+      "theme": "yellow"
+    },
+    {
+      "name": "Git",
+      "level": 3,
+      "theme": "yellow"
+    },
+    {
+      "name": "Docker",
+      "level": 1,
+      "theme": "yellow"
+    },
+    {
+      "name": "AWS",
+      "level": 1,
+      "theme": "yellow"
+    }
+  ]
+}
