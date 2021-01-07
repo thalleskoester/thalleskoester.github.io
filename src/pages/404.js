@@ -17,10 +17,11 @@ function Custom404() {
 }
 
 export async function getStaticProps(context) {
-  const locale = context.locale || context.defaultLocale;
+  const { defaultLocale, locales } = context;
+  const locale = context.locale || defaultLocale;
   const { table = {} } = await import(`../../i18n/${locale}/`);
 
-  return { props: { table }, revalidate: 60 * 60 * 60 * 24 };
+  return { props: { table, locale, locales }, revalidate: 60 * 60 * 60 * 24 };
 }
 
 export default Custom404;

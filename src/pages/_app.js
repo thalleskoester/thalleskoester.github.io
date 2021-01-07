@@ -2,9 +2,10 @@ import {I18nProvider} from 'next-rosetta';
 import {DefaultSeo, SocialProfileJsonLd} from 'next-seo';
 
 function MyApp({ Component, pageProps }) {
+  const appLocales = ['pt-BR', 'en-US'];
 
   const langAlternates = () => {
-    const locales = pageProps.locales.map((locale) => {
+    const locales = appLocales.map((locale) => {
       return { hrefLang: locale, href: `https://thalleskoester.com.br/${locale}/` };
     });
 
@@ -15,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   };
 
   const ogLangAlternates = () =>
-    pageProps.locales.map((locale) => {
+    appLocales.map((locale) => {
       return { property: 'og:locale:alternate', content: locale };
     });
 
