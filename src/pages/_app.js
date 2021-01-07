@@ -1,8 +1,10 @@
 import {I18nProvider} from 'next-rosetta';
 import {DefaultSeo, SocialProfileJsonLd} from 'next-seo';
+import {useRouter} from 'next/router';
 
 function MyApp({ Component, pageProps }) {
   const appLocales = ['pt-BR', 'en-US'];
+  const { route } = useRouter();
 
   const langAlternates = () => {
     const locales = appLocales.map((locale) => {
@@ -25,15 +27,15 @@ function MyApp({ Component, pageProps }) {
       <DefaultSeo
         titleTemplate='%s | Thalles Koester'
         description="This example uses more of the available config options."
-        canonical="https://www.thalleskoester.com.br/"
+        canonical={`https://thalleskoester.com.br${route === '/' ? '/' : `${route}/`}`}
         languageAlternates={langAlternates()}
         openGraph={{
           type: 'website',
-          locale: pageProps.locale,
-          url: 'https://www.thalleskoester.com.br/',
+          locale: appLocales,
+          url: `https://thalleskoester.com.br${route === '/' ? '/' : `${route}/`}`,
           images: [
             {
-              url: 'https://www.example.ie/og-image-01.jpg',
+              url: 'https://www.thalleskoester.com.br/static/images/banner.png',
               width: 1200,
               height: 630,
               alt: 'Banner do portifolio do Thalles Koester',
