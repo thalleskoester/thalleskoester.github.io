@@ -1,22 +1,31 @@
-import Head from 'next/head';
+import {useI18n} from 'next-rosetta';
+import {NextSeo} from 'next-seo';
 
 import Layout from '../components/website/Layout';
 import Portfolio from '../components/website/Portfolio';
 
 const Portifolio = ({ jobs }) => {
-  return (
-    <Layout>
-      <Head>
-        <title>Portifólio | Thalles Koester</title>
-      </Head>
+  const { t } = useI18n();
 
-      <Portfolio jobs={jobs}/>
-    </Layout>
+  return (
+    <>
+      <NextSeo
+        title={t('menu.pages.portfolio')}
+        openGraph={{
+          title: t('common.site.title', { page: t('menu.pages.portfolio') }),
+        }}
+      />
+
+      <Layout>
+        <Portfolio jobs={jobs}/>
+      </Layout>
+    </>
   );
 };
 
 export async function getStaticProps(context) {
-  const locale = context.locale || context.defaultLocale;
+  const { defaultLocale, locales } = context;
+  const locale = context.locale || defaultLocale;
   const { table = {} } = await import(`../../i18n/${locale}/`);
 
   const path = require('path');
@@ -28,7 +37,7 @@ export async function getStaticProps(context) {
 
   const { jobs } = JSON.parse(fileContent);
 
-  return { props: { table, jobs }, revalidate: 60 * 60 * 60 * 24 };
+  return { props: { table, jobs, locale, locales }, revalidate: 60 * 60 * 60 * 24 };
 }
 
 export default Portifolio;

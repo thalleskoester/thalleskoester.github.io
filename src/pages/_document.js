@@ -50,11 +50,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html dir={this.props.localeDirs[this.props.locale]}>
-        <Head>
-          <link rel="alternate" hrefLang="pt-br" href="http://localhost:3000/"/>
-          <link rel="alternate" hrefLang="x-default" href="http://localhost:3000/"/>
-          <link rel="alternate" hrefLang="en-us" href="http://localhost:3000/en-US"/>
-        </Head>
+        <Head/>
 
         <body>
         <Main/>

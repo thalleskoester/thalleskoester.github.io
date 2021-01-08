@@ -60,7 +60,7 @@ const Overlay = styled.header`
   bottom: 0;
   left: 0;
   padding: 10px;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, .8);
   color: #FFFFFF;
   text-align: center;
   overflow: hidden;

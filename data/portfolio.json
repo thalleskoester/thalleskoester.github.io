@@ -2,18 +2,33 @@
   "jobs": [
     {
       "name": "DinheirApp",
-      "image": "/static/images/test.jpg",
-      "short_description": "test test test test test test test test test test test test test test"
+      "short_description": "A DinheirApp é uma plataforma que te permite ganhar um dinheiro extra com as suas redes sociais sem sair de casa.",
+      "href": "https://dinheirapp.com.br",
+      "image": {
+        "src": "/static/images/portfolio/dinheirapp.png",
+        "width": 1200,
+        "height": 630
+      }
     },
     {
       "name": "E-Computação",
-      "image": "/static/images/test.jpg",
-      "short_description": "test test test test test test test test test test"
+      "short_description": "test test test test test test test test test test",
+      "href": "http://e-computacao.com.br/",
+      "image": {
+        "src": "/static/images/portfolio/e-computacao.png",
+        "width": 1200,
+        "height": 630
+      }
     },
     {
       "name": "Alves e Seixas",
-      "image": "/static/images/test.jpg",
-      "short_description": "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test"
+      "short_description": "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
+      "href": "https://alveseseixas.adv.br",
+      "image": {
+        "src": "/static/images/portfolio/alveseseixas.png",
+        "width": 1200,
+        "height": 630
+      }
     }
   ]
 }

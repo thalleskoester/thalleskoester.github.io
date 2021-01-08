@@ -1,6 +1,7 @@
 {
-  "name": "Thalles Koester",
+  "name": "Portofólio de Thalles Koester",
   "short_name": "Thalles Koester",
+  "start_url": "/",
   "icons": [
     {
       "src": "/static/pwa/android-chrome-192x192.png",

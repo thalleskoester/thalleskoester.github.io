@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import {useI18n} from 'next-rosetta';
+import {NextSeo} from 'next-seo';
 
 import Layout from '../components/website/Layout';
 import Presentation from '../components/website/Presentation';
@@ -8,21 +8,27 @@ function Index() {
   const { t } = useI18n();
 
   return (
-    <Layout>
-      <Head>
-        <title>{t('common.site.title', { page: t('menu.pages.home') })}</title>
-      </Head>
+    <>
+      <NextSeo
+        title={t('menu.pages.home')}
+        openGraph={{
+          title: t('common.site.title', { page: t('menu.pages.home') }),
+        }}
+      />
 
-      <Presentation/>
-    </Layout>
+      <Layout>
+        <Presentation/>
+      </Layout>
+    </>
   );
 }
 
 export async function getStaticProps(context) {
-  const locale = context.locale || context.defaultLocale;
+  const { defaultLocale, locales } = context;
+  const locale = context.locale || defaultLocale;
   const { table = {} } = await import(`../../i18n/${locale}/`);
 
-  return { props: { table }, revalidate: 60 * 60 * 60 * 24 };
+  return { props: { table, locale, locales }, revalidate: 60 * 60 * 60 * 24 };
 }
 
 export default Index;

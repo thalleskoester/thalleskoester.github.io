@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://www.thalleskoester.com.br/</loc>
+        <lastmod>2021-01-07</lastmod>
+
+        <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="https://www.thalleskoester.com.br/"/>
+
+        <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://www.thalleskoester.com.br/en-US/"/>
+
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://www.thalleskoester.com.br/sobre/</loc>
+        <lastmod>2021-01-07</lastmod>
+
+        <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="https://www.thalleskoester.com.br/sobre/"/>
+
+        <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://www.thalleskoester.com.br/en-US/sobre/"/>
+
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.thalleskoester.com.br/portifolio/</loc>
+        <lastmod>2021-01-07</lastmod>
+
+        <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="https://www.thalleskoester.com.br/portifolio/"/>
+
+        <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://www.thalleskoester.com.br/en-US/portifolio/"/>
+
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.thalleskoester.com.br/contato/</loc>
+        <lastmod>2021-01-07</lastmod>
+
+        <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="https://www.thalleskoester.com.br/contato/"/>
+
+        <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://www.thalleskoester.com.br/en-US/contato/"/>
+
+        <priority>0.80</priority>
+    </url>
+</urlset>

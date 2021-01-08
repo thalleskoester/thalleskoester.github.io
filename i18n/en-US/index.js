@@ -10,6 +10,7 @@ import {default as skills} from './skills';
 
 export const table = {
   dir: 'ltr',
+  code: 'en-US',
   about,
   common,
   contact,

@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import {useI18n} from 'next-rosetta';
+import {NextSeo} from 'next-seo';
 
 import Layout from '../components/website/Layout';
 import AboutMe from '../components/website/AboutMe';
@@ -9,19 +9,25 @@ const Sobre = ({ skills }) => {
   const { t } = useI18n();
 
   return (
-    <Layout>
-      <Head>
-        <title>{t('common.site.title', { page: t('menu.pages.about') })}</title>
-      </Head>
+    <>
+      <NextSeo
+        title={t('menu.pages.about')}
+        openGraph={{
+          title: t('common.site.title', { page: t('menu.pages.about') }),
+        }}
+      />
 
-      <AboutMe/>
-      <Skills skills={skills}/>
-    </Layout>
+      <Layout>
+        <AboutMe/>
+        <Skills skills={skills}/>
+      </Layout>
+    </>
   );
 };
 
 export async function getStaticProps(context) {
-  const locale = context.locale || context.defaultLocale;
+  const { defaultLocale, locales } = context;
+  const locale = context.locale || defaultLocale;
   const { table = {} } = await import(`../../i18n/${locale}/`);
 
   const path = require('path');
@@ -39,7 +45,7 @@ export async function getStaticProps(context) {
       .fill(false, skill.level);
   });
 
-  return { props: { table, skills }, revalidate: 60 * 60 * 60 * 24 };
+  return { props: { table, skills, locale, locales }, revalidate: 60 * 60 * 60 * 24 };
 }
 
 export default Sobre;
